@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: saddlebrown;
+}
+
+header{
+    background-color: black;
+    background-image: url(./img/Logo\ Amazing\ Events.png);
+    background-size: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100px;
+
+}
