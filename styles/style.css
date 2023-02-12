@@ -82,6 +82,12 @@ nav a.active {
 
 }
 
+form {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .formulario {
     width: 100%;
     height: 100px;
@@ -90,8 +96,8 @@ nav a.active {
 }
 
 label {
-    font-size: 20px;
-    color: aqua;
+    font-size: 30px;
+    color: rgb(255, 253, 253);
 }
 
 .contenedor-columnas {
@@ -113,10 +119,11 @@ label {
     color: #0a0a0a;
 }
 
-.columx2 img {
+img {
     margin: auto;
     width: 250px;
-    background-size: cover;
+    height: 150px;
+    object-fit: cover;
 
 }
 
@@ -125,7 +132,7 @@ footer {
     height: 35px;
     line-height: 20px;
     width: 100%;
-    position:fixed;
+    position: fixed;
     bottom: 0;
 }
 
