@@ -102,8 +102,8 @@ label {
 }
 
 .columx2 {
-width: 50%; 
-float: left;  
+    width: 50%;
+    float: left;
 }
 
 .columx2 h3 {
@@ -120,8 +120,17 @@ float: left;
 
 }
 
-@media only screen and (min-width:375px) and (max-width:1028px){
-    .contenedor-columnas{
+footer {
+    background-color: rgb(219, 179, 179);
+    height: 35px;
+    line-height: 20px;
+    width: 100%;
+    position:fixed;
+    bottom: 0;
+}
+
+@media only screen and (min-width:375px) and (max-width:1028px) {
+    .contenedor-columnas {
         flex-direction: column;
     }
 }
