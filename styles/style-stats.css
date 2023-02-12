@@ -100,3 +100,11 @@ th{
     font-size: 25px;
     text-align: left;
 }
+footer {
+    background-color: rgb(219, 179, 179);
+    height: 35px;
+    line-height: 20px;
+    width: 100%;
+    position:fixed;
+    bottom: 0;
+}
