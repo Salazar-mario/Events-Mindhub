@@ -17,8 +17,9 @@ body {
 }
 
 .fondo {
-    background-image: url(/img/pexels-photo-3696395\ \(1\).webp);
+    background-image: url(/img/img-meeting-conference-home.jpg);
     background-size: cover;
+    background-position: center;
     width: 100%;
     height: 220px;
 }
@@ -53,21 +54,57 @@ nav a.active {
     background-color: red;
     color: white;
 }
+.posicion-flechas {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    background-color: rgb(204, 67, 13);
 
+}
+
+.triangulo {
+    border-style: solid;
+    border-width: 18px;
+}
+
+.triangulo>div {
+    border-style: solid;
+    border-width: 10px;
+}
+
+.triangulo.right {
+    border-color: transparent transparent transparent black;
+}
+
+.triangulo.left {
+    border-color: transparent black transparent transparent;
+
+}
 footer {
     background-color: rgb(219, 179, 179);
-    height: 35px;
-    line-height: 20px;
     width: 100%;
+    height: 30px;
+    display: flex;
     position: fixed;
     bottom: 0;
 }
-.caja-position{
+
+footer p{
+    font-size: 23px;
+    color: rgb(5, 5, 5);
+    width: 100%;
+    text-align: center;
+
+}
+
+.caja-position {
     margin: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .caja-detalle {
     display: flex;
     flex-direction: column;
@@ -93,4 +130,16 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+@media only screen and (min-width:375px) and (max-width:597px) {
+    .caja-detalle {
+        width: 350px;
+        height: 350px;
+    }
+
+    .caja-detalle img {
+        width:350px;
+        height: 350px;
+    }
 }
