@@ -54,52 +54,6 @@ nav a.active {
     color: white;
 }
 
-.posicion-flechas {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 50px;
-    background-color: rgb(204, 67, 13);
-
-}
-
-.triangulo {
-    border-style: solid;
-    border-width: 18px;
-}
-
-.triangulo>div {
-    border-style: solid;
-    border-width: 10px;
-}
-
-.triangulo.right {
-    border-color: transparent transparent transparent black;
-}
-
-.triangulo.left {
-    border-color: transparent black transparent transparent;
-
-}
-
-table {
-    width: 95%;
-    height: 500px;
-    margin: 40px auto;
-    empty-cells: hide;
-    background-color:coral;
-
-}
-
-td{
-    background-color: white;
-    border-spacing: 25px;
-}
-
-th{
-    font-size: 25px;
-    text-align: left;
-}
 footer {
     background-color: rgb(219, 179, 179);
     height: 35px;
@@ -107,4 +61,36 @@ footer {
     width: 100%;
     position: fixed;
     bottom: 0;
+}
+.caja-position{
+    margin: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.caja-detalle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aqua;
+}
+
+.caja-detalle img {
+    width: 600px;
+    height: 350px;
+    object-fit: fill;
+    display: flex;
+}
+
+h3 {
+    display: flex;
+    flex-direction: row;
+    color: rgb(80, 6, 6);
+}
+
+.caja-detalle img h4 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
