@@ -10,10 +10,13 @@ html,
 body {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(../img/pexels-photo-391535.webp);
     background-size: cover;
     background-attachment: fixed;
+}
+main{
+    flex-grow: 1;
 }
 
 .fondo {
@@ -167,21 +170,27 @@ footer p{
 
 @media only screen and (min-width:375px) and (max-width:800px) {
     .contenedor-columnas {
-        display: block;
+        margin: 2px 2px 2px 2px;
     }
 
     form {
         display: block;
     }
-
+.columx2{
+    display: flex;
+    flex-direction: column;
+    margin: 2px 2px 2px 2px;
+}
     .columx2 .contenedor-1 {
-        width: 100px;
+        width: 150px;
+        display: flex;
+        flex-direction: column;
     }
 
     .columx2 img {
         margin: 1rem;
-        width: 90px;
-        height: 90px;
+        width: 120px;
+        height: 120px;
     }
 
     .columx2 h3 {
