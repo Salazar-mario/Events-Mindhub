@@ -179,7 +179,7 @@ footer p{
 .columx2{
     display: flex;
     flex-direction: column;
-    margin: 2px 2px 2px 2px;
+    width: 200px;
 }
     .columx2 .contenedor-1 {
         width: 150px;
@@ -200,5 +200,8 @@ footer p{
     .contenedor-columnas {
         display: block;
         height: 100px;
+    }
+    footer p{
+        font-size: 18px;
     }
 }

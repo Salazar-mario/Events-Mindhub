@@ -222,4 +222,7 @@ footer p{
     textarea{
         width: 200px;
     }
+    footer p {
+        font-size: 18px;
+    }
 }
