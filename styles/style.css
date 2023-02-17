@@ -115,7 +115,6 @@ fieldset{
 .columx2 {
     width: 33%;
     float: left;
-    margin: 2px 2px 2px 2px;
     
 }
 
@@ -168,7 +167,7 @@ footer p{
 
 }
 
-@media only screen and (min-width:375px) and (max-width:800px) {
+@media only screen and (min-width:341px) and (max-width:740px) {
     .contenedor-columnas {
         margin: 2px 2px 2px 2px;
     }
@@ -179,7 +178,7 @@ footer p{
 .columx2{
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 190px;
 }
     .columx2 .contenedor-1 {
         width: 150px;
@@ -189,7 +188,7 @@ footer p{
 
     .columx2 img {
         margin: 1rem;
-        width: 120px;
+        width: 170px;
         height: 120px;
     }
 
@@ -203,5 +202,24 @@ footer p{
     }
     footer p{
         font-size: 18px;
+    }
+}
+@media only screen and (min-width:350px) and (max-width:775px) {
+    nav{
+        display:flex;
+        flex-direction: column;
+    }
+    
+    nav a{
+        width: 52px;
+        height: 30px;
+        font-size: 12px;
+        padding: 0;
+        margin: 5px;
+    }
+}
+@media only screen and (min-width:350px) and (max-width:625px) {
+    .fondo{
+        background-size: contain;
     }
 }

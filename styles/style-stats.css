@@ -122,3 +122,22 @@ footer p{
         font-size: 18px;
     }
 }
+@media only screen and (min-width:350px) and (max-width:775px) {
+    nav{
+        display:flex;
+        flex-direction: column;
+    }
+    
+    nav a{
+        width: 52px;
+        height: 30px;
+        font-size: 12px;
+        padding: 0;
+        margin: 5px;
+    }
+}
+@media only screen and (min-width:350px) and (max-width:625px) {
+    .fondo{
+        background-size: contain;
+    }
+}
