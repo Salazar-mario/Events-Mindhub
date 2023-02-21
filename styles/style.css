@@ -15,7 +15,8 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
-main{
+
+main {
     flex-grow: 1;
 }
 
@@ -103,7 +104,8 @@ label {
     font-size: 20px;
     color: rgb(255, 253, 253);
 }
-fieldset{
+
+fieldset {
     border: none;
 }
 
@@ -115,7 +117,7 @@ fieldset{
 .columx2 {
     width: 33%;
     float: left;
-    
+
 }
 
 .columx2 h3 {
@@ -159,7 +161,7 @@ footer {
     bottom: 0;
 }
 
-footer p{
+footer p {
     font-size: 23px;
     color: rgb(5, 5, 5);
     text-align: center;
@@ -169,27 +171,29 @@ footer p{
 
 @media only screen and (min-width:341px) and (max-width:740px) {
     .contenedor-columnas {
-        margin: 2px 2px 2px 2px;
+        margin: 3px 3px 3px 3px;
     }
 
     form {
         display: block;
     }
-.columx2{
-    display: flex;
-    flex-direction: column;
-    width: 190px;
-}
+
+    .columx2 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 187px;
+    }
+
     .columx2 .contenedor-1 {
-        width: 150px;
         display: flex;
         flex-direction: column;
     }
 
     .columx2 img {
-        margin: 1rem;
-        width: 170px;
-        height: 120px;
+        margin: 2rem;
+        width: 180px;
+        height: 150px;
     }
 
     .columx2 h3 {
@@ -200,17 +204,19 @@ footer p{
         display: block;
         height: 100px;
     }
-    footer p{
+
+    footer p {
         font-size: 18px;
     }
 }
+
 @media only screen and (min-width:350px) and (max-width:775px) {
-    nav{
-        display:flex;
+    nav {
+        display: flex;
         flex-direction: column;
     }
-    
-    nav a{
+
+    nav a {
         width: 52px;
         height: 30px;
         font-size: 12px;
@@ -218,8 +224,9 @@ footer p{
         margin: 5px;
     }
 }
+
 @media only screen and (min-width:350px) and (max-width:625px) {
-    .fondo{
+    .fondo {
         background-size: contain;
     }
 }
