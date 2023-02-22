@@ -108,48 +108,42 @@ label {
 fieldset {
     border: none;
 }
-
-.contenedor-columnas {
+.container{
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: auto;
+}
+
+.container .card{
+    width: 330px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgb(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
     text-align: center;
+    transition: all 0.25s;
 }
-
-.columx2 {
-    width: 33%;
-    float: left;
-
+.container .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgb(0, 0, 0, 0.2);
 }
-
-.columx2 h3 {
-    font-size: 25px;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #0a0a0a;
-
-}
-
-.columx2 img {
-    margin: auto;
+.container .card img {
     width: 250px;
     height: 150px;
-    object-fit: cover;
 }
 
-.columx2 .contenedor-1 {
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-
+.container .card h4{
+    font-weight: 600;
 }
-
-.columx2 .contenedor-1 .rectangulo {
-    width: 80px;
+.container .card .rectangulo {
     height: 22px;
     color: white;
-    border: 1px solid #f0e1e1;
     background: #090a0a;
     cursor: pointer;
+    justify-content: flex-end;
 }
 
 footer {
