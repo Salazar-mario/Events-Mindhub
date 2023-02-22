@@ -164,39 +164,9 @@ footer p {
 }
 
 @media only screen and (min-width:341px) and (max-width:740px) {
-    .contenedor-columnas {
-        margin: 3px 3px 3px 3px;
-    }
-
+    
     form {
         display: block;
-    }
-
-    .columx2 {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        width: 187px;
-    }
-
-    .columx2 .contenedor-1 {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .columx2 img {
-        margin: 2rem;
-        width: 180px;
-        height: 150px;
-    }
-
-    .columx2 h3 {
-        font-size: 13px;
-    }
-
-    .contenedor-columnas {
-        display: block;
-        height: 100px;
     }
 
     footer p {
