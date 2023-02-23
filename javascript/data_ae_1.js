@@ -1,6 +1,6 @@
 const titleSite = document.title;
-const containerCategory = "category-container";
-const checkArea = document.getElementById("category-container");
+const containerCategory = "container";
+const checkArea = document.getElementById("container");
 
 
 async function amazingEventsWeb() {
@@ -179,27 +179,23 @@ async function amazingEventsWeb() {
   }
 
   console.log(data)
-
   let eventos = data.events;
-  // Crear Cards
-  function createCards(amazing, contenedorColumnas) {
-    let containerAbuelo = document.getElementById(contenedor - columnas);
-    containerAbuelo.innerHTML = "";
-    //
-    amazing.forEach((e) => {
-      let eventos = document.createElement("div");
-      eventos.className = "contenedor-columnas";
-      eventos.innerHTML = ` <div class="columx2">
-      <img src=${e.image} alt="Cine">
-      <h3>${e.category}</h3>
-      <h4>${e.name}</h4>
-      <div class="contenedor-1">
-          <p>${e.price}</p>
-          <a href="./details.html"><h4 class="rectangulo id=${e._id}">See more</h4></a>
-      </div>
-  </div>`;
-      containerAbuelo.appendChild(eventos);
-    });
+  window.onload = function createCards(amazing, container) {
+    let containerSection = document.getElementById(container); {
+      amazing.forEach((data) => {
+        let eventos = document.createElement("div");
+        eventos.className = "container";
+        eventos.innerHTML = `<div class="card">
+      <img src=${data.image} alt="Cinema">
+      <h3>${data.name}</h3>
+      <h4>${data.description}</h4>
+          <p>${data.price}</p>
+          <a href="./details.html"><h4 class="rectangulo" id=${data._id}>See more</h4></a>
+      </div>`;
+        containerSection.appendChild(eventos);
+      });
+    }
+    console.log(eventos);
   }
 }
-amazingEventsWeb();
+  amazingEventsWeb();
