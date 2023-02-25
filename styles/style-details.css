@@ -11,9 +11,24 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(../img/pexels-photo-391535.webp);
-    background-size: cover;
-    background-attachment: fixed;
+    background: linear-gradient(45deg, red, blue, green, black);
+    background-size: 400% 400%;
+    position: relative;
+    animation: cambiar 10s ease-in-out infinite;
+}
+
+@keyframes cambiar {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
 }
 
 .fondo {
@@ -59,7 +74,10 @@ nav a.active {
     justify-content: space-around;
     align-items: center;
     height: 50px;
-    background-color: rgb(204, 67, 13);
+    background: linear-gradient(45deg, red, blue, green, black);
+    background-size: 400% 400%;
+    position: relative;
+    animation: cambiar 10s ease-in-out infinite;
 
 }
 
@@ -97,40 +115,37 @@ footer p{
     text-align: center;
 
 }
-
-.caja-position {
-    margin: 100px;
+.container{
+    max-width: 1200px;
+    height: 100%;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 }
 
-.caja-detalle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(206, 128, 55);
+.container .card{
+    width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgb(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+}
+.container .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgb(0, 0, 0, 0.2);
+}
+.container .card img {
+    width: 450px;
+    height: 200px;
 }
 
-.caja-detalle img {
-    width: 550px;
-    height: 320px;
-    object-fit: fill;
-    display: flex;
+.container .card h4{
+    font-weight: 600;
 }
 
-h3 {
-    display: flex;
-    flex-direction: row;
-    color: black;
-}
-
-.caja-detalle img h4 {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 @media only screen and (min-width:375px) and (max-width:800px) {
     .caja-detalle {

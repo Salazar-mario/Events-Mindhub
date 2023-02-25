@@ -11,9 +11,24 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(../img/pexels-photo-391535.webp);
-    background-size: cover;
-    background-attachment: fixed;
+    background: linear-gradient(45deg, red, blue, green, black);
+    background-size: 400% 400%;
+    position: relative;
+    animation: cambiar 10s ease-in-out infinite;
+}
+
+@keyframes cambiar {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
 }
 
 .fondo {
@@ -60,8 +75,10 @@ nav a.active {
     justify-content: space-around;
     align-items: center;
     height: 50px;
-    background-color: rgb(204, 67, 13);
-
+    background: linear-gradient(45deg, red, blue, green, black);
+    background-size: 400% 400%;
+    position: relative;
+    animation: cambiar 10s ease-in-out infinite;
 }
 
 .triangulo {
@@ -88,19 +105,20 @@ table {
     height: 500px;
     margin: 40px auto;
     empty-cells: hide;
-    background-color:coral;
+    background-color: coral;
 
 }
 
-td{
+td {
     background-color: white;
     border-spacing: 25px;
 }
 
-th{
+th {
     font-size: 25px;
     text-align: left;
 }
+
 footer {
     background-color: rgb(219, 179, 179);
     width: 100%;
@@ -110,25 +128,27 @@ footer {
     bottom: 0;
 }
 
-footer p{
+footer p {
     font-size: 23px;
     color: rgb(5, 5, 5);
     width: 100%;
     text-align: center;
 
 }
+
 @media only screen and (min-width:375px) and (max-width:800px) {
     footer p {
         font-size: 18px;
     }
 }
+
 @media only screen and (min-width:350px) and (max-width:775px) {
-    nav{
-        display:flex;
+    nav {
+        display: flex;
         flex-direction: column;
     }
-    
-    nav a{
+
+    nav a {
         width: 52px;
         height: 30px;
         font-size: 12px;
@@ -136,8 +156,9 @@ footer p{
         margin: 5px;
     }
 }
+
 @media only screen and (min-width:350px) and (max-width:625px) {
-    .fondo{
+    .fondo {
         background-size: contain;
     }
 }

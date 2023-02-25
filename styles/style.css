@@ -11,9 +11,24 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color:rgb(146, 78, 143);
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(45deg, red, blue, green, black);
+    background-size: 400% 400%;
+    position: relative;
+    animation: cambiar 10s ease-in-out infinite;
+}
+
+@keyframes cambiar {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
 }
 
 main {
@@ -64,8 +79,10 @@ nav a.active {
     justify-content: space-around;
     align-items: center;
     height: 50px;
-    background-color: rgb(204, 67, 13);
-
+    background: linear-gradient(45deg, red, blue, green, black);
+    background-size: 400% 400%;
+    position: relative;
+    animation: cambiar 10s ease-in-out infinite;
 }
 
 .triangulo {
@@ -108,7 +125,8 @@ label {
 fieldset {
     border: none;
 }
-.container{
+
+.container {
     max-width: 1200px;
     display: flex;
     flex-wrap: wrap;
@@ -116,7 +134,7 @@ fieldset {
     justify-content: center;
 }
 
-.container .card{
+.container .card {
     width: 330px;
     border-radius: 8px;
     box-shadow: 0 2px 2px rgb(0, 0, 0, 0.2);
@@ -125,18 +143,21 @@ fieldset {
     text-align: center;
     transition: all 0.25s;
 }
-.container .card:hover{
+
+.container .card:hover {
     transform: translateY(-15px);
     box-shadow: 0 12px 16px rgb(0, 0, 0, 0.2);
 }
+
 .container .card img {
     width: 250px;
     height: 150px;
 }
 
-.container .card h4{
+.container .card h4 {
     font-weight: 600;
 }
+
 .container .card .rectangulo {
     height: 22px;
     color: white;
@@ -163,7 +184,7 @@ footer p {
 }
 
 @media only screen and (min-width:341px) and (max-width:740px) {
-    
+
     form {
         display: block;
     }

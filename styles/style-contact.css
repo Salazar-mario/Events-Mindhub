@@ -11,9 +11,24 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(../img/pexels-photo-391535.webp);
-    background-size: cover;
-    background-attachment: fixed;
+    background: linear-gradient(45deg, red, blue, green, black);
+    background-size: 400% 400%;
+    position: relative;
+    animation: cambiar 10s ease-in-out infinite;
+}
+
+@keyframes cambiar {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
 }
 
 .fondo {
@@ -60,8 +75,10 @@ nav a.active {
     justify-content: space-around;
     align-items: center;
     height: 50px;
-    background-color: rgb(204, 67, 13);
-
+    background: linear-gradient(45deg,red,blue,green,black);
+    background-size: 400% 400%;
+    position: relative;
+    animation: cambiar 10s ease-in-out infinite;
 }
 
 .triangulo {
