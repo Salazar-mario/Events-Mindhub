@@ -11,9 +11,9 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(../img/pexels-photo-391535.webp);
+    background-color:rgb(146, 78, 143);
     background-size: cover;
-    background-attachment: fixed;
+    background-position: center;
 }
 
 main {
@@ -21,10 +21,10 @@ main {
 }
 
 .fondo {
-    background-image: url(/img/img-meeting-conference-home.jpg);
+    background-image: url(../img/img-meeting-conference-home.jpg);
     background-size: cover;
-    background-position: center;
     width: 100%;
+    background-position: center;
     height: 220px;
 }
 
@@ -109,12 +109,11 @@ fieldset {
     border: none;
 }
 .container{
-    width: 100%;
     max-width: 1200px;
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-end;
     justify-content: center;
-    margin: auto;
 }
 
 .container .card{
