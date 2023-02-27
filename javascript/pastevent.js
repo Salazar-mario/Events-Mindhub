@@ -1,28 +1,82 @@
+let div = document.getElementById("boxpast")
 let events = data.events
-let eventsCard = [];
-let currentDate = data.currentDate;
-let templates=[];
+div.innerHTML = ``
 
 
-function crearpastEvent() {
-    for (let element of events) {
-        if(element.date<currentDate){
-        let cardEventos = `<div class="card">
+let oldEvents = events.filter(function (events) {
+    return events.date <= data.currentDate
+})
+
+function crearpastEvent(datos, contenedor) {
+    contenedor.innerHTML = ""
+    let eventos = ""
+    datos.forEach((element) => {
+        eventos += `<div class="card">
     <img src="${element.image}" alt="Cinema">
     <h3>${element.name}</h3>
     <h4>${element.description}</h4>
         <p>Price: $${element.price}</p>
         <a href="./details.html"><h4 class="rectangulo">See more</h4></a>
     </div>`
-    eventsCard.push(cardEventos)
+    })
+    contenedor.innerHTML = eventos
+
+}
+crearpastEvent(oldEvents, div);
+
+let categoryConteiner = document.getElementById("checks")
+let categoryPrincipal = document.getElementById("boxCheck")
+
+let categorias = (Array.from(new Set(events.map(container => container.category))))
+
+console.log(categorias)
+//creacion de los checkbox
+function CreacionCheckbox(category, conteiner) {
+    let checkboxs = ""
+    category.forEach(element => {
+        checkboxs += `<input type="checkbox" name="category" id="${element}" value="${element}" for="${element}">
+    ${element}</label>`
+    })
+    conteiner.innerHTML += checkboxs
+}
+
+CreacionCheckbox(categorias, categoryConteiner)
+categoryPrincipal.addEventListener("change", () => {
+    let filtradoCategoria = filter()
+    console.log(filtradoCategoria)
+    crearpastEvent(filtradoCategoria, div)
+})
+
+//filtro de categoria
+function filterCategoria(eventos) {
+    let checked = (Array.from(document.querySelectorAll("input[type ='checkbox']:checked"))
+        .map((date) => date.value));
+    let arrayFiltrado = checked
+        .map((value) =>
+            eventos.filter((container) => {
+                return container.category === value;
+            })
+        ).flat();
+    if (checked.length == false) {
+        return oldEvents;
+    } else {
+        return arrayFiltrado;
     }
 }
-}
-function printEvents() {
-    let cardEventos = document.getElementById('boxpast');
-    cardEventos.innerHTML = eventsCard.join('')
+
+let input = document.getElementById("input-texto")
+
+input.addEventListener("input", () => {
+    let filtradoPorBusqueda = filter()
+    crearpastEvent(filtradoPorBusqueda, div)
+})
+
+function filterBusqueda(eventos, valueSearch) {
+    return eventos.filter(event => (event.name).toLowerCase().includes(valueSearch.toLowerCase()))
 }
 
-
-crearpastEvent();
-printEvents();
+function filter() {
+    let filtradoCategoria = filterCategoria(events, categorias)
+    let filtradoBusqueda = filterBusqueda(filtradoCategoria, input.value)
+    return filtradoBusqueda
+}

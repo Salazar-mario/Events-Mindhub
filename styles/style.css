@@ -104,26 +104,18 @@ nav a.active {
 
 }
 
-form {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-}
-
 .formulario {
     width: 100%;
     height: 120px;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
 label {
     font-size: 20px;
     color: rgb(255, 253, 253);
-}
-
-fieldset {
-    border: none;
 }
 
 .container {
@@ -135,7 +127,7 @@ fieldset {
 }
 
 .container .card {
-    width: 330px;
+    width: 360px;
     border-radius: 8px;
     box-shadow: 0 2px 2px rgb(0, 0, 0, 0.2);
     overflow: hidden;
@@ -150,8 +142,8 @@ fieldset {
 }
 
 .container .card img {
-    width: 250px;
-    height: 150px;
+    width: 300px;
+    height: 180px;
 }
 
 .container .card h4 {
@@ -169,7 +161,6 @@ fieldset {
 footer {
     background-color: rgb(219, 179, 179);
     width: 100%;
-    height: 30px;
     display: flex;
     text-align: center;
     bottom: 0;
