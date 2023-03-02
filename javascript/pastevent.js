@@ -1,10 +1,10 @@
 let div = document.getElementById("boxpast")
-let events = data.events
+let assistance = data.events
 div.innerHTML = ``
 
 
-let oldEvents = events.filter(function (events) {
-    return events.date <= data.currentDate
+let oldEvents = assistance.filter(function (assistance) {
+    return assistance.date <= data.currentDate
 })
 
 function crearpastEvent(datos, contenedor) {
@@ -16,6 +16,7 @@ function crearpastEvent(datos, contenedor) {
     <h3>${element.name}</h3>
     <h4>${element.description}</h4>
         <p>Price: $${element.price}</p>
+        <p>Assistance: ${element.assistance}</p>
         <a href="./details.html"><h4 class="rectangulo">See more</h4></a>
     </div>`
     })
@@ -27,7 +28,7 @@ crearpastEvent(oldEvents, div);
 let categoryConteiner = document.getElementById("checks")
 let categoryPrincipal = document.getElementById("boxCheck")
 
-let categorias = (Array.from(new Set(events.map(container => container.category))))
+let categorias = (Array.from(new Set(assistance.map(container => container.category))))
 
 console.log(categorias)
 //creacion de los checkbox

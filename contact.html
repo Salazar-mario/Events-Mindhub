@@ -33,39 +33,18 @@
             </a>
         </div>
         <div class="contact_form">
-            <div class="formulario">
-                <form action="submeter-formulario" method="post">
-                    <p>
-                        <label for="nombre" class="colocar_nombre">Name:
-                            <span class="obligatorio">*</span>
-                        </label>
-                        <input type="text" name="introducir_nombre" id="nombre" required placeholder="Write your name">
-                    </p>
 
-                    <p>
-                        <label for="email" class="colocar_email">Email:
-                            <span class="obligatorio">*</span>
-                        </label>
-                        <input type="email" name="introducir_email" id="email" required placeholder="Write your email">
-                    </p>
-                    <p>
-                        <label for="mensaje" class="colocar_mensaje">Mensagge:
-                            <span class="obligatorio">*</span>
-                        </label>
-                        <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required
-                            placeholder="Leave your comment here..."></textarea>
-                    </p>
-
-                    <button type="submit" name="enviar_formulario" id="enviar">
-                        Send
-                    </button>
-
-                    <p class="aviso">
-                        <span class="obligatorio"> * </span>the fields are required.
-                    </p>
-
-                </form>
-            </div>
+            <form id="form" action="" class="form">
+                <h3 class="tag"><span>HABLEMOS</span></h3>
+                <label for="name">Nombre Completo <span>*</span></label>
+                <input name="name" required type="text" id="name" placeholder="Juan">
+                <label for="email">Correo electrónico <span>*</span></label>
+                <input name="email" type="text" id="email" required placeholder="juan@gmail.com">
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" id="inputEmail" cols="30" rows="10"></textarea>
+                <button type="submit" class="btn primary full">enviar mensaje</button>
+            </form>
+            <a href="mario.agustin.salazar@gmail.com" id="trucazo"></a>
         </div>
         <footer>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30px" height="30px">
@@ -83,7 +62,7 @@
             <p>Agustin Salazar | © FE05 Mindhub 2023</p>
         </footer>
     </main>
-
+    <script src="./javascript/contact.js"></script>
 </body>
 
 </html>
