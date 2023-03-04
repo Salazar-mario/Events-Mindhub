@@ -36,14 +36,13 @@
 
             <form id="form" action="" class="form">
                 <label for="name">Name <span>*</span></label>
-                <input name="name" required type="text" id="name" placeholder="name">
+                <input name="name" type="text" id="name" placeholder="name">
                 <label for="email">Email<span>*</span></label>
-                <input name="email" type="text" id="email" required placeholder="email">
+                <input name="email" type="text" id="email" placeholder="email">
                 <label for="message">Message</label>
                 <textarea id="message" name="message" id="inputEmail" cols="30" rows="10"></textarea>
-                <button type="submit" class="btn primary full">Send message</button>
+                <button type="submit" onClick="getEmail()">Send message</button>
             </form>
-            <a href="mario.agustin.salazar@gmail.com" id="trucazo"></a>
         </div>
         <footer>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30px" height="30px">
@@ -62,6 +61,10 @@
         </footer>
     </main>
     <script src="./javascript/contact.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./javascript/sweetAlert.js"></script>
+
+
 </body>
 
 </html>

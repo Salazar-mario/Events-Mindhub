@@ -72,12 +72,12 @@ input.addEventListener("input", () => {
     crearpastEvent(filtradoPorBusqueda, div)
 })
 
-function filterBusqueda(eventos, valueSearch) {
-    return eventos.filter(event => (event.name).toLowerCase().includes(valueSearch.toLowerCase()))
+function filterBusqueda(assistance, valueSearch) {
+    return assistance.filter(event => (event.name).toLowerCase().includes(valueSearch.toLowerCase()))
 }
 
 function filter() {
-    let filtradoCategoria = filterCategoria(events, categorias)
+    let filtradoCategoria = filterCategoria(assistance, categorias)
     let filtradoBusqueda = filterBusqueda(filtradoCategoria, input.value)
     return filtradoBusqueda
 }

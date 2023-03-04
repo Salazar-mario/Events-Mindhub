@@ -13,7 +13,6 @@ body {
     min-height: 100vh;
     background: linear-gradient(45deg, red, blue, green, black);
     background-size: 400% 400%;
-    position: relative;
     animation: cambiar 10s ease-in-out infinite;
 }
 
@@ -119,7 +118,6 @@ label {
 }
 
 .container {
-    max-width: 1200px;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
@@ -128,8 +126,7 @@ label {
 
 .container .card {
     width: 360px;
-    border-radius: 8px;
-    box-shadow: 0 2px 2px rgb(0, 0, 0, 0.2);
+    border-radius: 35px;
     overflow: hidden;
     margin: 20px;
     text-align: center;
@@ -142,7 +139,7 @@ label {
 }
 
 .container .card img {
-    width: 300px;
+    width: 320px;
     height: 180px;
 }
 

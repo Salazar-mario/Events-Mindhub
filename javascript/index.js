@@ -75,7 +75,3 @@ function filter() {
   let filtradoBusqueda = filterBusqueda(filtradoCategoria, input.value)
   return filtradoBusqueda
 }
-
-
-
-  
