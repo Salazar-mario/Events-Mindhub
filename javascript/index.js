@@ -19,10 +19,9 @@ function CreacionCard(datos, contenedor) {
 CreacionCard(events, div);
 console.log(events);
 
-function defineNoEventCard() {
-  // Template for no event card
+function defineNotCard() {
   return `<div class="card">
-  <img src="not found" alt="Cinema">
+  <img src="not found" alt="">
   <h3>name</h3>
   <h4>description</h4>
   </div>
@@ -50,6 +49,7 @@ categoryPrincipal.addEventListener("change", () => {
   let filtradoCategoria = filter()
   console.log(filtradoCategoria)
   CreacionCard(filtradoCategoria, div)
+  defineNotCard(filtradoCategoria,div) 
 })
 
 //filtro de categoria
@@ -63,7 +63,7 @@ function filterCategoria(eventos) {
       })
     ).flat();
   if (checked.length == false) {
-    return events;
+    return events 
   } else {
     return arrayFiltrado
   }
@@ -74,6 +74,7 @@ let input = document.getElementById("input-texto")
 input.addEventListener("input", () => {
   let filtradoBusqueda = filter()
   CreacionCard(filtradoBusqueda, div)
+  defineNotCard(filtradoBusqueda,div) 
 })
 
 function filterBusqueda(eventos, valueSearch) {
@@ -83,5 +84,5 @@ function filterBusqueda(eventos, valueSearch) {
 function filter() {
   let filtradoCategoria = filterCategoria(events, categorias)
   let filtradoBusqueda = filterBusqueda(filtradoCategoria, input.value)
-  return filtradoBusqueda 
+  return filtradoBusqueda
 }
