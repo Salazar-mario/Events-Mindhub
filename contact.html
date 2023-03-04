@@ -8,6 +8,7 @@
     <title>Contact</title>
     <link rel="icon" type="image/png" sizes="18x18" href="./img/favicon-16x16.png">
     <link rel="stylesheet" href="./styles/style-contact.css">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -34,14 +35,14 @@
         </div>
         <div class="contact_form">
 
-            <form id="form" action="" class="form">
+            <form id="formulario" action="" class="form">
                 <label for="name">Name <span>*</span></label>
                 <input name="name" type="text" id="name" placeholder="name">
                 <label for="email">Email<span>*</span></label>
                 <input name="email" type="text" id="email" placeholder="email">
                 <label for="message">Message</label>
                 <textarea id="message" name="message" id="inputEmail" cols="30" rows="10"></textarea>
-                <button type="submit" onClick="getEmail()">Send message</button>
+                <button type="submit">Send message</button>
             </form>
         </div>
         <footer>
@@ -61,8 +62,7 @@
         </footer>
     </main>
     <script src="./javascript/contact.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="./javascript/sweetAlert.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
 
 
 </body>

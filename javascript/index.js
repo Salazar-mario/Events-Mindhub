@@ -6,7 +6,7 @@ function CreacionCard(datos, contenedor) {
   contenedor.innerHTML = ""
   let eventos = ""
   datos.forEach((date) => {
-    eventos +=`<div class="card">
+    eventos += `<div class="card">
     <img src="${date.image}" alt="Cinema">
     <h3>${date.name}</h3>
     <h4>${date.description}</h4>
@@ -14,11 +14,20 @@ function CreacionCard(datos, contenedor) {
         <a href="./details.html?id=${date._id}"><h4 class="rectangulo">See more</h4></a>
     </div>`
   })
-    contenedor.innerHTML = eventos
+  contenedor.innerHTML = eventos
 }
 CreacionCard(events, div);
 console.log(events);
 
+function defineNoEventCard() {
+  // Template for no event card
+  return `<div class="card">
+  <img src="not found" alt="Cinema">
+  <h3>name</h3>
+  <h4>description</h4>
+  </div>
+		`
+}
 let categoryConteiner = document.getElementById("checks")
 let categoryPrincipal = document.getElementById("boxCheck")
 
@@ -34,6 +43,7 @@ function CreacionCheckbox(category, conteiner) {
   })
   conteiner.innerHTML += checkboxs
 }
+
 
 CreacionCheckbox(categorias, categoryConteiner)
 categoryPrincipal.addEventListener("change", () => {
@@ -55,7 +65,7 @@ function filterCategoria(eventos) {
   if (checked.length == false) {
     return events;
   } else {
-    return arrayFiltrado;
+    return arrayFiltrado
   }
 }
 
@@ -73,5 +83,5 @@ function filterBusqueda(eventos, valueSearch) {
 function filter() {
   let filtradoCategoria = filterCategoria(events, categorias)
   let filtradoBusqueda = filterBusqueda(filtradoCategoria, input.value)
-  return filtradoBusqueda
+  return filtradoBusqueda 
 }
