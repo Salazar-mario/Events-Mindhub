@@ -14,10 +14,11 @@ function CreacionCard(datos, contenedor) {
         <a href="./details.html?id=${date._id}"><h4 class="rectangulo">See more</h4></a>
     </div>`
   })
-  contenedor.innerHTML = eventos
+  if (datos.length === 0) 
+    contenedor.innerHTML = defineNotCard();
+else
+    contenedor.innerHTML = eventos;
 }
-CreacionCard(events, div);
-console.log(events);
 
 function defineNotCard() {
   return `<div class="card">
@@ -50,6 +51,7 @@ categoryPrincipal.addEventListener("change", () => {
   console.log(filtradoCategoria)
   CreacionCard(filtradoCategoria, div)
   defineNotCard(filtradoCategoria,div) 
+
 })
 
 //filtro de categoria
@@ -74,7 +76,8 @@ let input = document.getElementById("input-texto")
 input.addEventListener("input", () => {
   let filtradoBusqueda = filter()
   CreacionCard(filtradoBusqueda, div)
-  defineNotCard(filtradoBusqueda,div) 
+  defineNotCard(filtradoCategoria,div) 
+
 })
 
 function filterBusqueda(eventos, valueSearch) {

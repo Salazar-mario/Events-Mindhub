@@ -17,7 +17,7 @@ function crearpastEvent(datos, contenedor) {
     <h4>${element.description}</h4>
         <p>Price: $${element.price}</p>
         <p>Assistance: ${element.assistance}</p>
-        <a href="./details.html"><h4 class="rectangulo">See more</h4></a>
+        <a href="./details.html?id=${element._id}"><h4 class="rectangulo">See more</h4></a>
     </div>`
     })
     contenedor.innerHTML = eventos
