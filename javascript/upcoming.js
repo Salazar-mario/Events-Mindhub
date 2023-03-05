@@ -20,11 +20,21 @@ function crearupComing(datos, contenedor) {
         <a href="./details.html?id=${element._id}"><h4 class="rectangulo">See more</h4></a>
     </div>`
     })
-    contenedor.innerHTML = eventos
+    if (datos.length === 0)
+        contenedor.innerHTML = defineNotCard();
+    else
+        contenedor.innerHTML = eventos;
 }
-
-
 crearupComing(upcomingEvents, div);
+
+function defineNotCard() {
+    return `<div class="card">
+    <img src="img/no-image-available.webp" alt="NotFound">
+    <h3>NotFound</h3>
+    <h4>The event you are looking for was not found!</h4>
+    </div>`
+}
+defineNotCard();
 
 
 

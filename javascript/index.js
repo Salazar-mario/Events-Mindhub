@@ -15,19 +15,22 @@ function CreacionCard(datos, contenedor) {
     </div>`
   })
   if (datos.length === 0) 
-    contenedor.innerHTML = defineNotCard();
-else
-    contenedor.innerHTML = eventos;
+  contenedor.innerHTML = defineNotCard();
+  else
+  contenedor.innerHTML = eventos;
 }
+CreacionCard(events,div);
 
 function defineNotCard() {
   return `<div class="card">
-  <img src="not found" alt="">
-  <h3>name</h3>
-  <h4>description</h4>
+  <img src="img/no-image-available.webp" alt="NotFound">
+  <h3>NotFound</h3>
+  <h4>The event you are looking for was not found!</h4>
   </div>
 		`
 }
+defineNotCard();
+
 let categoryConteiner = document.getElementById("checks")
 let categoryPrincipal = document.getElementById("boxCheck")
 
@@ -50,7 +53,7 @@ categoryPrincipal.addEventListener("change", () => {
   let filtradoCategoria = filter()
   console.log(filtradoCategoria)
   CreacionCard(filtradoCategoria, div)
-  defineNotCard(filtradoCategoria,div) 
+  defineNotCard() 
 
 })
 
@@ -76,13 +79,12 @@ let input = document.getElementById("input-texto")
 input.addEventListener("input", () => {
   let filtradoBusqueda = filter()
   CreacionCard(filtradoBusqueda, div)
-  defineNotCard(filtradoCategoria,div) 
+  defineNotCard() 
 
 })
 
 function filterBusqueda(eventos, valueSearch) {
-  return eventos.filter(event => (event.name).toLowerCase().includes(valueSearch.toLowerCase()))
-}
+  return eventos.filter(event => (event.name).toLowerCase().includes(valueSearch.toLowerCase()))}
 
 function filter() {
   let filtradoCategoria = filterCategoria(events, categorias)
