@@ -150,7 +150,7 @@ let data = {
             "image": "https://i.postimg.cc/vH52y81C/cinema4.jpg",
             "name": "Batman",
             "date": "2021-3-11",
-            "description": "Come see Batman fight crime in Gotham City.",
+            "description": "Come see Batman fight crime in Gotham City in our theaters.",
             "category": "Cinema",
             "place": "Room D1",
             "capacity": 11000,

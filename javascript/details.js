@@ -11,9 +11,15 @@ const eventsId = dataEvents.find(element => element._id == id)
 
 const details = document.getElementById("idContainer")
 
-details.innerHTML = `<div class="card">
-<img src="${eventsId.image}" alt="Cinema">
-<h3>${eventsId.name}</h3>
-<h4>${eventsId.description}</h4>
-    <p>Price: $${eventsId.price}</p>
-</div>`
+details.innerHTML = ` <div class="card">
+<div class="imgs">
+  <img src="${eventsId.image}"/>
+</div>
+<div class="details">
+  <div class="center">
+    <h1>${eventsId.name}</h1>
+    <h2>${eventsId.description}</h2>
+    <h3>Date: ${eventsId.date} - Place: ${eventsId.place}</h3>
+    <h4>Capacity:${eventsId.capacity}</h4>
+    <h4>Price: $${eventsId.price}</h4>
+`

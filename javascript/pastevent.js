@@ -47,7 +47,7 @@ function CreacionCheckbox(category, conteiner) {
     let checkboxs = ""
     category.forEach(element => {
         checkboxs += `<input type="checkbox" name="category" id="${element}" value="${element}" for="${element}">
-    ${element}</label>`
+    ${element}`
     })
     conteiner.innerHTML += checkboxs
 }
