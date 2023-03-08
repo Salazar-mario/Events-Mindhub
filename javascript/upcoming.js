@@ -16,7 +16,6 @@ function crearupComing(datos, contenedor) {
     <h3>${element.name}</h3>
     <h4>${element.description}</h4>
         <p>Price: $${element.price}</p>
-        <p>Estimate:${element.estimate}</p>
         <a href="./details.html?id=${element._id}"><h4 class="rectangulo">See more</h4></a>
     </div>`
     })

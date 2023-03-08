@@ -15,6 +15,7 @@ body {
     background-size: 400% 400%;
     position: relative;
     animation: cambiar 10s ease-in-out infinite;
+    cursor: url(../img/cursor.png), pointer;
 }
 
 @keyframes cambiar {
@@ -101,26 +102,29 @@ nav a.active {
 }
 
 .contact_form {
-    width: 460px;
+    width: 470px;
     margin: 30px auto;
     border-radius: 10px;
     padding-top: 15px;
-    background-color: #a78787;
+    background-color:  rgb(148, 139, 143);
     padding-left: 30px;
+    cursor: url(../img/cursor.png), pointer;
+
 }
 
 
 input {
-    background-color: #fbfbfb;
+    background-color: #ffffff;
     width: 408px;
     height: 40px;
     border-radius: 5px;
     border-style: solid;
     border-width: 1px;
-    border-color: #22021b;
     margin-top: 10px;
     padding-left: 10px;
     margin-bottom: 20px;
+    cursor: url(../img/cursor.png), pointer;
+
 }
 
 
@@ -131,17 +135,21 @@ textarea {
     border-radius: 5px;
     border-style: solid;
     border-width: 1px;
-    border-color: #c20d0d;
+    border-color: black;
     margin-top: 10px;
     padding-left: 10px;
     margin-bottom: 20px;
     padding-top: 15px;
+    cursor: url(../img/cursor.png), pointer;
+
 }
 
 
 label {
     display: block;
     float: center;
+    cursor: url(../img/cursor.png), pointer;
+
 }
 
 
@@ -152,8 +160,7 @@ button {
     margin-bottom: 20px;
     margin-top: 10px;
     text-transform: uppercase;
-    background-color: #df5159;
-    border-color: #ab4493;
+    background-color:   black;
     border-style: solid;
     border-radius: 10px;
     width: 420px;
@@ -171,11 +178,6 @@ span {
 }
 
 
-.aviso {
-    font-size: 13px;
-    color: #0e0e0e;
-}
-
 h3 {
     font-size: 16px;
     padding-bottom: 30px;
@@ -188,27 +190,6 @@ p {
     color: #0e0e0e;
 }
 
-
-::-webkit-input-placeholder {
-    color: #a8a8a8;
-}
-
-
-::-webkit-textarea-placeholder {
-    color: #a8a8a8;
-}
-
-
-.formulario input:focus {
-    outline: 0;
-    border: 1px solid #97d848;
-}
-
-
-.formulario textarea:focus {
-    outline: 0;
-    border: 1px solid #97d848;
-}
 footer {
     background-color: rgb(219, 179, 179);
     width: 100%;
