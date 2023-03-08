@@ -21,3 +21,15 @@ function aplicar(e){
   })
 }
 }
+
+function alertWindow (form) {
+	return `
+  <label for="name">${form.name}<span>*</span></label>
+  <input name="name" type="text" id="name" placeholder="name">
+  <label for="email">${form.email}<span>*</span></label>
+  <input name="email" type="text" id="email" placeholder="email">
+  <label for="message">${form.message}</label>
+  <textarea id="message" name="message" id="inputEmail" cols="30" rows="10"></textarea>
+  <button type="submit">Send message</button>
+		`
+}

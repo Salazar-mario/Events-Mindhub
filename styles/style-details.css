@@ -69,6 +69,7 @@ nav a.active {
     background-color: rgb(112, 15, 75);
     color: white;
 }
+
 .posicion-flechas {
     display: flex;
     justify-content: space-around;
@@ -99,6 +100,7 @@ nav a.active {
     border-color: transparent black transparent transparent;
 
 }
+
 footer {
     background-color: rgb(219, 179, 179);
     width: 100%;
@@ -108,13 +110,14 @@ footer {
     bottom: 0;
 }
 
-footer p{
+footer p {
     font-size: 23px;
     color: rgb(5, 5, 5);
     width: 100%;
     text-align: center;
 
 }
+
 html,
 body {
     display: flex;
@@ -126,92 +129,135 @@ body {
     animation: cambiar 10s ease-in-out infinite;
 }
 
-.container{
+.container {
     max-width: 85%;
     height: 95%;
     display: flex;
     align-items: flex-end;
-    justify-content:flex-end;
+    justify-content: flex-end;
 }
+
 .card {
-    transform: translate(-50%,-50%);
-    width:500px;
+    transform: translate(-50%, -50%);
+    width: 500px;
     height: 336px;
 }
+
 .card .imgs {
     width: 300px;
 }
+
 .card .imgs img {
     width: 200%;
     height: 335px;
     transition: .5s;
 }
+
 .card:hover .imgs img {
     opacity: .5;
     transform: translateX(30%);
 }
+
 .card .details {
     position: absolute;
     top: 0;
     left: 0;
-    width: 70%;/*100%*/
+    width: 70%;
     height: 100%;
-    background: #991e57;
     transition: .5s;
     transform-origin: left;
     transform: perspective(2000px) rotateY(-90deg);
+    background: rgb(255, 0, 119);
+
 }
+
 .card:hover .details {
     transform: perspective(2000px) rotateY(0deg);
 }
+
 .card .details .center {
     padding: 20px;
     text-align: center;
-    background: #fff;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    background: linear-gradient(45deg, red, blue, green, black);
+    background-size: 400% 400%;
+    animation: cambiar 10s ease-in-out infinite;
+}
+
+@keyframes cambiar {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+.card .details{
+    width: 300px;
 }
 .card .details .center h1 {
-    color: #ff3636;
-    line-height: 50px;
-    font-size: 25px;
+    color: #5e0505;
+    
     text-transform: uppercase;
 }
 
 @media only screen and (min-width:375px) and (max-width:800px) {
-    .caja-detalle {
-        width: 350px;
-        height: 350px;
-    }
-
-    .caja-detalle img {
-        width:350px;
-        height: 350px;
-    }
+    
+}
     @media only screen and (min-width:375px) and (max-width:800px) {
         footer p {
             font-size: 18px;
         }
-    }
+    
 }
 @media only screen and (min-width:350px) and (max-width:775px) {
-    nav{
+    nav {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
     }
-    
-    nav a{
+
+    nav a {
         width: 52px;
         height: 30px;
         font-size: 12px;
         padding: 0;
         margin: 5px;
     }
+    .card {
+        width: 220px;
+    }
+    .card .imgs img{
+        width: 300px;
+    }
+    .card .details{
+        width: 190px;
+    }
 }
+
 @media only screen and (min-width:350px) and (max-width:625px) {
-    .fondo{
+    .fondo {
         background-size: contain;
     }
+}
+
+@media only screen and (min-width:799px) and (max-width:1200px){
+    .card {
+        width: 400px;
+    }
+    .card .imgs img{
+        width: 500px;
+    }
+    .card .details{
+        width: 250px;
+    }
+
 }
