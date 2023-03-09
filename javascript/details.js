@@ -1,4 +1,3 @@
-
 const dataEvents = data.events
 const queryString = location.search
 const params = new URLSearchParams(queryString)

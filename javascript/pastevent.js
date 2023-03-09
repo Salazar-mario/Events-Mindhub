@@ -84,7 +84,7 @@ input.addEventListener("input", () => {
 })
 
 function filterBusqueda(assistance, valueSearch) {
-    return assistance.filter(event => (event.name).toLowerCase().includes(valueSearch.toLowerCase()))
+    return assistance.filter(event => (event.name).toLowerCase()&& (valueSearch.length === 0 || valueSearch.includes(valueSearch.category)) && (event.date < data.currentDate))
 }
 
 function filter() {
