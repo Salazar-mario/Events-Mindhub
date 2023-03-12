@@ -32,81 +32,43 @@
                 <div class="triangulo right"></div>
             </a>
         </div>
-        <table>
+        <div id="id="tablas">
+        <table id="table1">
             <tr>
                 <th>Events statistics</th>
-                <th>&nbsp;&nbsp;&nbsp;</th>
-                <th>&nbsp;&nbsp;&nbsp;</th>
-
             </tr>
             <tr>
-                <td>Events with the highest percentage of attendance</td>
-                <td>Events with the lowest percentageof of attendance</td>
-                <td>Event with larger capacity</td>
+                <td id="maxAtt">Loading Event...</td>
+                <td id="minAtt">Loading Event...</td>
+                <td id="maxCap">Loading Event...</td>
             </tr>
             <tr>
-                <td>&nbsp;&nbsp;&nbsp;</td>
-                <td>&nbsp;&nbsp;&nbsp;</td>
-                <td>&nbsp;&nbsp;&nbsp;</td>
-            </tr>
-            <tr>
-                <th>Upcoming events statistics by category</th>
-                <th>&nbsp;&nbsp;&nbsp;</th>
-                <th>&nbsp;&nbsp;&nbsp;</th>
-            </tr>
-            <tr>
-                <td>Categories</td>
-                <td>Revenues</td>
-                <td>Percentage of attendance</td>
-            </tr>
-            <tr>
-                <td>&nbsp;&nbsp;&nbsp;</td>
-                <td>&nbsp;&nbsp;&nbsp;</td>
-                <td>&nbsp;&nbsp;&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;&nbsp;&nbsp;</td>
-                <td>&nbsp;&nbsp;&nbsp;</td>
-                <td>&nbsp;&nbsp;&nbsp;</td>
-            </tr>
-            <tr>
-                <th>Past Events statistics by category</th>
-                <th>&nbsp;&nbsp;&nbsp;</th>
-                <th>&nbsp;&nbsp;&nbsp;</th>
-
-            </tr>
-            <tr>
-                <td>Categories</td>
-                <td>Revenues</td>
-                <td>Percentage of attendance</td>
-
-            </tr>
-            <tr>
-                <td>&nbsp;&nbsp;&nbsp;</td>
-                <td>&nbsp;&nbsp;&nbsp;</td>
-                <td>&nbsp;&nbsp;&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;&nbsp;&nbsp;</td>
-                <td>&nbsp;&nbsp;&nbsp;</td>
-                <td>&nbsp;&nbsp;&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;&nbsp;&nbsp;</td>
-                <td>&nbsp;&nbsp;&nbsp;</td>
-                <td>&nbsp;&nbsp;&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;&nbsp;&nbsp;</td>
-                <td>&nbsp;&nbsp;&nbsp;</td>
-                <td>&nbsp;&nbsp;&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;&nbsp;&nbsp;</td>
-                <td>&nbsp;&nbsp;&nbsp;</td>
-                <td>&nbsp;&nbsp;&nbsp;</td>
+                <td id="maxAttValue">...</td>
+                <td id="minAttValue">...</td>
+                <td id="maxCapValue">...</td>
             </tr>
         </table>
+        <table id="table2">
+            <tr>
+                <th>Upcoming Event Statistics by Category</th>
+            </tr>
+            <tr>
+                <td>Categories</td>
+                <td>Revenues</td>
+                <td>Percentage of attendance</td>
+            </tr>
+        </table>
+        <table id="table3">
+            <tr>
+                <th>Past Events statistics by category</th>
+            </tr>
+            <tr>
+                <td>Categories</td>
+                <td>Revenues</td>
+                <td>Percentage of attendance</td>
+            </tr>
+        </table>
+    </div>
         <footer>
             <?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30px" height="30px">
                 <path
@@ -124,7 +86,7 @@
 
         </footer>
     </main>
-
+<script src="./javascript/stats.js"></script>
 </body>
 
 </html>

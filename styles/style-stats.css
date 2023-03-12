@@ -103,8 +103,8 @@ nav a.active {
 }
 
 table {
-    width: 95%;
-    height: 500px;
+    width: 90%;
+    height: 100px;
     margin: 40px auto;
     empty-cells: hide;
     background-color: coral;

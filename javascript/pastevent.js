@@ -1,10 +1,14 @@
+async function pastEventos() {
+    let urlApi = "https://api-amazingevents.onrender.com/api/amazing-events?time=past";
+    let fetchResponse = await fetch(urlApi);
+    let response = await fetchResponse.json();
+    let assistance = response.events;
 let div = document.getElementById("boxpast")
-let assistance = data.events
 div.innerHTML = ``
 
 
 let oldEvents = assistance.filter(function (assistance) {
-    return assistance.date <= data.currentDate
+    return assistance.date <= response.currentDate
 })
 
 function crearpastEvent(datos, contenedor) {
@@ -84,7 +88,7 @@ input.addEventListener("input", () => {
 })
 
 function filterBusqueda(assistance, valueSearch) {
-    return assistance.filter(event => (event.name).toLowerCase()&& (valueSearch.length === 0 || valueSearch.includes(valueSearch.category)) && (event.date < data.currentDate))
+    return assistance.filter(event => (event.name).toLowerCase()&& (valueSearch.length === 0 || valueSearch.includes(valueSearch.category)) && (event.date < response.currentDate))
 }
 
 function filter() {
@@ -92,3 +96,5 @@ function filter() {
     let filtradoBusqueda = filterBusqueda(filtradoCategoria, input.value)
     return filtradoBusqueda
 }
+}
+pastEventos()
