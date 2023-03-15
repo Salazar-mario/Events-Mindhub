@@ -102,23 +102,22 @@ nav a.active {
 
 }
 
-table {
-    width: 90%;
-    height: 100px;
-    margin: 40px auto;
-    empty-cells: hide;
-    background-color: coral;
 
+table tr, th, td {
+    border: 2px solid black;
+    background-color: rgba(15, 15, 15, 0.412);
+    color: white;
 }
-
-td {
-    background-color: white;
-    border-spacing: 25px;
+table thead{
+    background-color: black;
+    height: 3rem;
+    color: white;
 }
-
-th {
-    font-size: 25px;
-    text-align: left;
+.stats-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
 }
 
 footer {

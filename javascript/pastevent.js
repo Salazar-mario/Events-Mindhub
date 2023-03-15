@@ -21,7 +21,7 @@ function crearpastEvent(datos, contenedor) {
     <h4>${element.description}</h4>
         <p>Price: $${element.price}</p>
         <p>Assistance: ${element.assistance}</p>
-        <a href="./details.html?id=${element._id}"><h4 class="rectangulo">See more</h4></a>
+        <a href="./details.html?id=${element.id}"><h4 class="rectangulo">See more</h4></a>
     </div>`
     })
     if (datos.length === 0)
@@ -87,10 +87,9 @@ input.addEventListener("input", () => {
     crearpastEvent(filtradoPorBusqueda, div)
 })
 
-function filterBusqueda(assistance, valueSearch) {
-    return assistance.filter(event => (event.name).toLowerCase()&& (valueSearch.length === 0 || valueSearch.includes(valueSearch.category)) && (event.date < response.currentDate))
-}
-
+function filterBusqueda(eventos, valueSearch) {
+    return eventos.filter(event => (event.name).toLowerCase().includes(valueSearch.toLowerCase()))
+}  
 function filter() {
     let filtradoCategoria = filterCategoria(assistance, categorias)
     let filtradoBusqueda = filterBusqueda(filtradoCategoria, input.value)

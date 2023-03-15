@@ -20,7 +20,7 @@ async function upcomingEventos() {
     <h3>${element.name}</h3>
     <h4>${element.description}</h4>
         <p>Price: $${element.price}</p>
-        <a href="./details.html?id=${element._id}"><h4 class="rectangulo">See more</h4></a>
+        <a href="./details.html?id=${element.id}"><h4 class="rectangulo">See more</h4></a>
     </div>`
         })
         if (datos.length === 0)
@@ -88,7 +88,7 @@ async function upcomingEventos() {
     })
 
     function filterBusqueda(eventos, valueSearch) {
-        return eventos.filter(event => (event.name).toLowerCase().includes(valueSearch.toLowerCase()) && (valueSearch.length === 0 || valueSearch.includes(eventos.category)))
+        return eventos.filter(event => (event.name).toLowerCase().includes(valueSearch.toLowerCase()))
     }
 
     function filter() {

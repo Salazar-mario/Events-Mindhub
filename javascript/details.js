@@ -1,15 +1,22 @@
-const queryString = location.search
-const params = new URLSearchParams(queryString)
-const id = params.get("id")
+let queryString = location.search
+let params = new URLSearchParams(queryString)
+let id = params.get("id")
 
 
 async function printDetails() {
-let urlApi = "https://api-amazingevents.onrender.com/api/amazing-events";
-let fetchResponse = await fetch(urlApi);
-let response = await fetchResponse.json();
-let eventsId = response.events.find(eventsId => eventsId.id === id)
-let details = document.getElementById("idContainer")
-details.innerHTML = ` <div class="card">
+  try {
+  let urlApi = "https://api-amazingevents.onrender.com/api/amazing-events";
+  let fetchResponse = await fetch(urlApi);
+  let response = await fetchResponse.json();
+  let arrayEventos = response.events
+  let eventsId = arrayEventos.find(eventsId => eventsId.id === id)
+  cardDetails(eventsId)
+}catch (error) {
+    console.log(error);
+}
+}
+function cardDetails(eventsId){
+  let card = ` <div class="card">
 <div class="imgs">
   <img src="${eventsId.image}"/>
 </div>
@@ -20,5 +27,7 @@ details.innerHTML = ` <div class="card">
     <h3>Date: ${eventsId.date} - Place: ${eventsId.place}</h3>
     <h4>Capacity:${eventsId.capacity}</h4>
     <h4>Price: $${eventsId.price}</h4>
-`}
+`;
+document.getElementById("idContainer").innerHTML = card;
+}
 printDetails()
