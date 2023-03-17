@@ -102,7 +102,9 @@ nav a.active {
 
 }
 
-
+table{
+    width: 90%;
+}
 table tr, th, td {
     border: 2px solid black;
     background-color: rgba(15, 15, 15, 0.412);

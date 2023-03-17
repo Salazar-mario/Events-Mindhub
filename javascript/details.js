@@ -17,16 +17,15 @@ async function printDetails() {
 }
 function cardDetails(eventsId){
   let card = ` <div class="card">
-<div class="imgs">
   <img src="${eventsId.image}"/>
-</div>
-<div class="details">
-  <div class="center">
+<div class="descriptions">
     <h1>${eventsId.name}</h1>
-    <h2>${eventsId.description}</h2>
-    <h3>Date: ${eventsId.date} - Place: ${eventsId.place}</h3>
-    <h4>Capacity:${eventsId.capacity}</h4>
-    <h4>Price: $${eventsId.price}</h4>
+    <p>${eventsId.description}</p>
+    <h2>Date: ${eventsId.date}</h2>
+    <h2>Place: ${eventsId.place}</h2>
+    <h2>Capacity: ${eventsId.capacity}</h2>
+    <h2>Price: $${eventsId.price}</h2>
+    </div>
 `;
 document.getElementById("idContainer").innerHTML = card;
 }

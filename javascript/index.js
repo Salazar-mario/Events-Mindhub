@@ -13,10 +13,10 @@ async function printEvents() {
       eventos += `<div class="card">
     <img src="${date.image}" alt="Cinema">
     <h3>${date.name}</h3>
-    <h4>${date.description}</h4>
+    <p>${date.description}</p>
         <p>Price: $${date.price}</p>
         <a href="./details.html?id=${date.id}"><h4 class="rectangulo">See more</h4></a>
-    </div>`
+        </div>`
     })
     if (datos.length === 0)
       contenedor.innerHTML = defineNotCard();
@@ -26,10 +26,10 @@ async function printEvents() {
   CreacionCard(events, div);
 
   function defineNotCard() {
-    return `<div class="card">
-  <img src="img/no-image-available.webp" alt="NotFound">
-  <h3>NotFound</h3>
-  <h4>The event you are looking for was not found!</h4>
+    return `<div class="card" height:100px>
+    <img src="img/no-image-available.webp" alt="NotFound">
+    <h3>NotFound</h3>
+  <p>The event you are looking for was not found!</p>
   </div>
 		`
   }

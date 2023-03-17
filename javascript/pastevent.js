@@ -18,7 +18,7 @@ function crearpastEvent(datos, contenedor) {
         eventos += `<div class="card">
     <img src="${element.image}" alt="Cinema">
     <h3>${element.name}</h3>
-    <h4>${element.description}</h4>
+    <p>${element.description}</p>
         <p>Price: $${element.price}</p>
         <p>Assistance: ${element.assistance}</p>
         <a href="./details.html?id=${element.id}"><h4 class="rectangulo">See more</h4></a>

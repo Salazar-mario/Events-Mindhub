@@ -129,95 +129,95 @@ body {
     animation: cambiar 10s ease-in-out infinite;
 }
 
-.container {
-    max-width: 85%;
-    height: 95%;
+.wrapper {
+
+    position: absolute;
+    top:60%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 650px;
+    height: auto;
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .card {
-    transform: translate(-50%, -50%);
-    width: 500px;
-    height: 336px;
+    flex: 1;
+    flex-basis: 600px;
+    flex-grow: 0;
+    background: #fff;
+    border: 2px solid #fff;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, .5);
+    cursor: pointer;
+    transition: all .5s cubic-bezier(.8, .5, .2, 1.4);
+    overflow: hidden;
+    position: relative;
 }
 
-.card .imgs {
-    width: 300px;
-}
-
-.card .imgs img {
-    width: 200%;
-    height: 335px;
-    transition: .5s;
-}
-
-.card:hover .imgs img {
-    opacity: .5;
-    transform: translateX(30%);
-}
-
-.card .details {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 70%;
+.card img {
+    width: 100%;
     height: 100%;
-    transition: .5s;
-    transform-origin: left;
-    transform: perspective(2000px) rotateY(-90deg);
-    background: rgb(255, 0, 119);
-
+    transition: all .5s cubic-bezier(.8, .5, .2, 1.4);
 }
 
-.card:hover .details {
-    transform: perspective(2000px) rotateY(0deg);
-}
-
-.card .details .center {
-    padding: 20px;
-    text-align: center;
+.descriptions {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: linear-gradient(45deg, red, blue, green, black);
-    background-size: 400% 400%;
-    animation: cambiar 10s ease-in-out infinite;
+    top:0px;
+    left:0px;
+    background-color: rgba(255, 255, 255, .7);
+    width: 100%;
+    height: 100%;
+    transition: all .7s ease-in-out;
+    padding: 20px;
+    box-sizing: border-box;
+    clip-path: circle(0% at 100% 100%);
 }
 
-@keyframes cambiar {
-    0% {
-        background-position: 0 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0 50%;
-    }
+.card:hover .descriptions {
+    left: 0px;
+    transition: all .7s ease-in-out;
+    clip-path: circle(75%);
 }
 
-.card .details{
-    width: 300px;
+.card:hover {
+    transition: all .5s cubic-bezier(.8, .5, .2, 1.4);
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, .3);
+    transform: scale(.97);
 }
-.card .details .center h1 {
-    color: #5e0505;
-    
-    text-transform: uppercase;
+
+.card:hover img {
+    transition: all .5s cubic-bezier(.8, .5, .2, 1.4);
+    transform: scale(1.6) rotate(20deg);
+    filter: blur(3px);
 }
+
+.card h1 {
+    color: #ff3838;
+    letter-spacing: 1px;
+    margin: 0px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.card p {
+    line-height: 30px;
+    font-size: 25px;
+    height: 50%;
+
+}
+
+
+@media only screen and (min-width:375px) and (max-width:800px) {}
 
 @media only screen and (min-width:375px) and (max-width:800px) {
-    
+    footer p {
+        font-size: 18px;
+    }
+
 }
-    @media only screen and (min-width:375px) and (max-width:800px) {
-        footer p {
-            font-size: 18px;
-        }
-    
-}
+
 @media only screen and (min-width:350px) and (max-width:775px) {
     nav {
         display: flex;
@@ -232,13 +232,16 @@ body {
         padding: 0;
         margin: 5px;
     }
+
     .card {
         width: 220px;
     }
-    .card .imgs img{
+
+    .card .imgs img {
         width: 300px;
     }
-    .card .details{
+
+    .card .details {
         width: 190px;
     }
 }
@@ -249,14 +252,16 @@ body {
     }
 }
 
-@media only screen and (min-width:799px) and (max-width:1200px){
+@media only screen and (min-width:799px) and (max-width:1200px) {
     .card {
         width: 400px;
     }
-    .card .imgs img{
+
+    .card .imgs img {
         width: 500px;
     }
-    .card .details{
+
+    .card .details {
         width: 250px;
     }
 

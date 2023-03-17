@@ -18,7 +18,7 @@ async function upcomingEventos() {
             eventos += `<div class="card">
     <img src="${element.image}" alt="Cinema">
     <h3>${element.name}</h3>
-    <h4>${element.description}</h4>
+    <p>${element.description}</p>
         <p>Price: $${element.price}</p>
         <a href="./details.html?id=${element.id}"><h4 class="rectangulo">See more</h4></a>
     </div>`
@@ -34,7 +34,7 @@ async function upcomingEventos() {
         return `<div class="card">
     <img src="img/no-image-available.webp" alt="NotFound">
     <h3>NotFound</h3>
-    <h4>The event you are looking for was not found!</h4>
+    <p>The event you are looking for was not found!</p>
     </div>`
     }
     defineNotCard();
