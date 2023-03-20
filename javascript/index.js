@@ -26,10 +26,9 @@ async function printEvents() {
   CreacionCard(events, div);
 
   function defineNotCard() {
-    return `<div class="card" height:100px>
+    return `<div class="card2">
     <img src="img/no-image-available.webp" alt="NotFound">
-    <h3>NotFound</h3>
-  <p>The event you are looking for was not found!</p>
+    <h3>The event you are looking for was not found!</h3>
   </div>
 		`
   }

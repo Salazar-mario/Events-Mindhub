@@ -10,27 +10,27 @@ async function createTable() {
             }
         }
         pastEvArray.sort((a, b) => b.capacity - a.capacity);
-        document.getElementById("idMaxEventCapacity").innerHTML = `${pastEvArray[0].name}`;
-        let maxCapacity = document.getElementById("idMaxCapacity");
+        document.getElementById("MaxEventCapacity").innerHTML = `${pastEvArray[0].name}`;
+        let maxCapacity = document.getElementById("MaxCapacity");
         maxCapacity.innerHTML = `${pastEvArray[0].capacity}`
         pastEvArray.sort((a, b) => b.assistance - a.assistance);
-        document.getElementById("idMaxEventAssistance").innerHTML = `${pastEvArray[0].name}`;
-        document.getElementById("idMaxAssistance").innerHTML = `${pastEvArray[0].assistance}`
-        document.getElementById("idMinEventAssistance").innerHTML = `${pastEvArray[pastEvArray.length - 1].name}`;
-        document.getElementById("idMinAssistance").innerHTML = `${pastEvArray[pastEvArray.length - 1].assistance}` 
+        document.getElementById("MaxEventAssistance").innerHTML = `${pastEvArray[0].name}`;
+        document.getElementById("MaxAssistance").innerHTML = `${pastEvArray[0].assistance}`
+        document.getElementById("MinEventAssistance").innerHTML = `${pastEvArray[pastEvArray.length - 1].name}`;
+        document.getElementById("MinAssistance").innerHTML = `${pastEvArray[pastEvArray.length - 1].assistance}` 
         let categoryPastArray = [];
         let categoryPastArrayFilter = [];
         let categoryPastArrayInnerHtml = [];
-        pastEvArray.forEach(element => {
+        pastEvArray.forEach(event => {
             let asistencia = "";
             let capacidad = "";
             let precio = "";
             let ganancia = "";
             let porcentajeAsistencia = "";
             let obj_acc = {};
-            if (!categoryPastArray.includes(element.category)) {
-                categoryPastArray.push(element.category);
-                categoryPastArrayFilter = pastEvArray.filter(e => e.category == element.category)
+            if (!categoryPastArray.includes(event.category)) {
+                categoryPastArray.push(event.category);
+                categoryPastArrayFilter = pastEvArray.filter(e => e.category == event.category)
                 categoryPastArrayFilter.reduce((acc, current) => {
                     asistencia = current.assistance;
                     precio = current.price;
@@ -45,7 +45,7 @@ async function createTable() {
                 }, { totalGanancia: 0, totalCapacidad: 0, totalAsistencia: 0 })
                 porcentajeAsistencia = (obj_acc.totalAsistencia / obj_acc.totalCapacidad * 100).toFixed(2);
                 categoryPastArrayInnerHtml.push(`<tr>
-            <td>${element.category}</td>
+            <td>${event.category}</td>
             <td>$ ${obj_acc.totalGanancia}</td>
             <td>${porcentajeAsistencia}%</td>
             </tr>`)
@@ -70,16 +70,16 @@ async function createTableColumn() {
         let categoryUpcomingArray = [];
         let categoryUpcomingArrayFilter = [];
         let categoryUpcomingArrayInnerHtml = [];
-        upcomingEvArray.forEach(element => {
+        upcomingEvArray.forEach(event => {
             let estimado = "";
             let capacidad = "";
             let precio = "";
             let ganancia = "";
             let porcentajeEstimado = "";
             let obj_acc = {};
-            if (!categoryUpcomingArray.includes(element.category)) {
-                categoryUpcomingArray.push(element.category);
-                categoryUpcomingArrayFilter = upcomingEvArray.filter(e => e.category == element.category)
+            if (!categoryUpcomingArray.includes(event.category)) {
+                categoryUpcomingArray.push(event.category);
+                categoryUpcomingArrayFilter = upcomingEvArray.filter(e => e.category == event.category)
                 categoryUpcomingArrayFilter.reduce((acc, current) => {
                     estimado = current.estimate;
                     precio = current.price;
@@ -94,7 +94,7 @@ async function createTableColumn() {
                 }, { totalGananciaEstimada: 0, totalCapacidad: 0, totalAsistenciaEstimada: 0 })
                 porcentajeEstimado = (obj_acc.totalAsistenciaEstimada / obj_acc.totalCapacidad * 100).toFixed(2);
                 categoryUpcomingArrayInnerHtml.push(`<tr>
-            <td>${element.category}</td>
+            <td>${event.category}</td>
             <td>$ ${obj_acc.totalGananciaEstimada}</td>
             <td>${porcentajeEstimado}%</td>
             </tr>`)

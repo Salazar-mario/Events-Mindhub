@@ -32,7 +32,7 @@ function crearpastEvent(datos, contenedor) {
 crearpastEvent(oldEvents, div);
 
 function defineNotCard() {
-    return `<div class="card">
+    return `<div class="card2">
 <img src="img/no-image-available.webp" alt="NotFound">
 <h3>NotFound</h3>
 <h4>The event you are looking for was not found!</h4>
