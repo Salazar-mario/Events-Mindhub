@@ -13,11 +13,11 @@ async function createTable() {
         document.getElementById("MaxEventCapacity").innerHTML = `${pastEvArray[0].name}`;
         let maxCapacity = document.getElementById("MaxCapacity");
         maxCapacity.innerHTML = `${pastEvArray[0].capacity}`
-        pastEvArray.sort((a, b) => b.assistance - a.assistance);
+        pastEvArray.sort((a, b) => ((b.assistance * 100) /b.capacity) - ((a.assistance * 100)/ a.capacity));
         document.getElementById("MaxEventAssistance").innerHTML = `${pastEvArray[0].name}`;
         document.getElementById("MaxAssistance").innerHTML = `${pastEvArray[0].assistance}`
         document.getElementById("MinEventAssistance").innerHTML = `${pastEvArray[pastEvArray.length - 1].name}`;
-        document.getElementById("MinAssistance").innerHTML = `${pastEvArray[pastEvArray.length - 1].assistance}` 
+        document.getElementById("MinAssistance").innerHTML = `${pastEvArray[pastEvArray.length - 1].assistance}`
         let categoryPastArray = [];
         let categoryPastArrayFilter = [];
         let categoryPastArrayInnerHtml = [];

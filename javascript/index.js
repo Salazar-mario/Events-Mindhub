@@ -5,7 +5,6 @@ async function printEvents() {
   let events = response.events;
   let div = document.getElementById("boxCard")
   div.innerHTML = ``
-
   function CreacionCard(datos, contenedor) {
     contenedor.innerHTML = ""
     let eventos = ""
@@ -24,7 +23,6 @@ async function printEvents() {
       contenedor.innerHTML = eventos;
   }
   CreacionCard(events, div);
-
   function defineNotCard() {
     return `<div class="card2">
     <img src="img/no-image-available.webp" alt="NotFound">
@@ -36,11 +34,9 @@ async function printEvents() {
 
   let categoryConteiner = document.getElementById("checks")
   let categoryPrincipal = document.getElementById("boxCheck")
-
   let categorias = (Array.from(new Set(events.map(container => container.category))))
-
   console.log(categorias)
-  //creacion de los checkbox
+  
   function CreacionCheckbox(category, conteiner) {
     let checkboxs = ""
     category.forEach(date => {
@@ -49,8 +45,6 @@ async function printEvents() {
     })
     conteiner.innerHTML += checkboxs
   }
-
-
   CreacionCheckbox(categorias, categoryConteiner)
   categoryPrincipal.addEventListener("change", () => {
     let filtradoCategoria = filter()
@@ -59,8 +53,6 @@ async function printEvents() {
     defineNotCard()
 
   })
-
-  //filtro de categoria
   function filterCategoria(eventos) {
     let checked = (Array.from(document.querySelectorAll("input[type ='checkbox']:checked"))
       .map((date) => date.value));
@@ -76,26 +68,19 @@ async function printEvents() {
       return arrayFiltrado
     }
   }
-
   let input = document.getElementById("input-texto")
-
   input.addEventListener("input", () => {
     let filtradoBusqueda = filter()
     CreacionCard(filtradoBusqueda, div)
     defineNotCard()
-
   })
-
   function filterBusqueda(eventos, valueSearch) {
     return eventos.filter(event => (event.name).toLowerCase().includes(valueSearch.toLowerCase()))
   }
-
   function filter() {
     let filtradoCategoria = filterCategoria(events, categorias)
     let filtradoBusqueda = filterBusqueda(filtradoCategoria, input.value)
     return filtradoBusqueda
   }
 }
-
-
 printEvents()
