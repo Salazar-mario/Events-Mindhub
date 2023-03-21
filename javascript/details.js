@@ -21,10 +21,10 @@ function cardDetails(eventsId){
 <div class="descriptions">
     <h1>${eventsId.name}</h1>
     <p>${eventsId.description}</p>
-    <h2>Date: ${eventsId.date}</h2>
-    <h2>Place: ${eventsId.place}</h2>
-    <h2>Capacity: ${eventsId.capacity}</h2>
-    <h2>Price: $${eventsId.price}</h2>
+    <h2><span>Date</span>: ${eventsId.date}</h2>
+    <h2><span>Place</span>: ${eventsId.place}</h2>
+    <h2><span>Capacity</span>: ${eventsId.capacity}</h2>
+    <h2><span>Price</span>: $${eventsId.price}</h2>
     </div>
 `;
 document.getElementById("idContainer").innerHTML = card;
