@@ -5,12 +5,9 @@ async function pastEventos() {
     let assistance = response.events;
 let div = document.getElementById("boxpast")
 div.innerHTML = ``
-
-
 let oldEvents = assistance.filter(function (assistance) {
     return assistance.date <= response.currentDate
 })
-
 function crearpastEvent(datos, contenedor) {
     contenedor.innerHTML = ""
     let eventos = ""
@@ -30,7 +27,6 @@ function crearpastEvent(datos, contenedor) {
         contenedor.innerHTML = eventos;
 }
 crearpastEvent(oldEvents, div);
-
 function defineNotCard() {
     return `<div class="card2">
 <img src="img/no-image-available.webp" alt="NotFound">
@@ -39,14 +35,10 @@ function defineNotCard() {
 </div>`
 }
 defineNotCard();
-
 let categoryConteiner = document.getElementById("checks")
 let categoryPrincipal = document.getElementById("boxCheck")
-
 let categorias = (Array.from(new Set(assistance.map(container => container.category))))
-
 console.log(categorias)
-//creacion de los checkbox
 function CreacionCheckbox(category, conteiner) {
     let checkboxs = ""
     category.forEach(element => {
@@ -55,15 +47,12 @@ function CreacionCheckbox(category, conteiner) {
     })
     conteiner.innerHTML += checkboxs
 }
-
 CreacionCheckbox(categorias, categoryConteiner)
 categoryPrincipal.addEventListener("change", () => {
     let filtradoCategoria = filter()
     console.log(filtradoCategoria)
     crearpastEvent(filtradoCategoria, div)
 })
-
-//filtro de categoria
 function filterCategoria(eventos) {
     let checked = (Array.from(document.querySelectorAll("input[type ='checkbox']:checked"))
         .map((date) => date.value));
@@ -79,14 +68,11 @@ function filterCategoria(eventos) {
         return arrayFiltrado;
     }
 }
-
 let input = document.getElementById("input-texto")
-
 input.addEventListener("input", () => {
     let filtradoPorBusqueda = filter()
     crearpastEvent(filtradoPorBusqueda, div)
 })
-
 function filterBusqueda(eventos, valueSearch) {
     return eventos.filter(event => (event.name).toLowerCase().includes(valueSearch.toLowerCase()))
 }  

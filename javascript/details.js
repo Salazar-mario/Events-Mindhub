@@ -1,8 +1,6 @@
 let queryString = location.search
 let params = new URLSearchParams(queryString)
 let id = params.get("id")
-
-
 async function printDetails() {
   try {
   let urlApi = "https://api-amazingevents.onrender.com/api/amazing-events";

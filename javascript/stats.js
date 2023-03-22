@@ -57,7 +57,6 @@ async function createTable() {
         console.log(error);
     }
 }
-createTable()
 async function createTableColumn() {
     try {
         let urlApi = "https://api-amazingevents.onrender.com/api/amazing-events?time=upcoming"
@@ -106,4 +105,5 @@ async function createTableColumn() {
         console.log(error);
     }
 }
+createTable()
 createTableColumn()

@@ -5,12 +5,9 @@ async function upcomingEventos() {
     let events = response.events;
     let div = document.getElementById("boxupcoming");
     div.innerHTML = ``;
-
     let upcomingEvents = events.filter(function (events) {
         return events.date >= response.currentDate
     });
-
-
     function crearupComing(datos, contenedor) {
         contenedor.innerHTML = ""
         let eventos = ""
@@ -29,7 +26,6 @@ async function upcomingEventos() {
             contenedor.innerHTML = eventos;
     }
     crearupComing(upcomingEvents, div);
-
     function defineNotCard() {
         return `<div class="card2">
     <img src="img/no-image-available.webp" alt="NotFound">
@@ -38,13 +34,9 @@ async function upcomingEventos() {
     </div>`
     }
     defineNotCard();
-
-
     let categoryConteiner = document.getElementById("checks")
     let categoryPrincipal = document.getElementById("boxCheck")
-
     let categorias = (Array.from(new Set(events.map(container => container.category))))
-
     console.log(categorias)
     //creacion de los checkbox
     function CreacionCheckbox(category, conteiner) {
@@ -55,15 +47,12 @@ async function upcomingEventos() {
         })
         conteiner.innerHTML += checkboxs
     }
-
     CreacionCheckbox(categorias, categoryConteiner)
     categoryPrincipal.addEventListener("change", () => {
         let filtradoCategoria = filter()
         console.log(filtradoCategoria)
         crearupComing(filtradoCategoria, div)
     })
-
-    //filtro de categoria
     function filterCategoria(eventos) {
         let checked = (Array.from(document.querySelectorAll("input[type ='checkbox']:checked"))
             .map((date) => date.value));
@@ -79,18 +68,14 @@ async function upcomingEventos() {
             return arrayFiltrado;
         }
     }
-
     let input = document.getElementById("input-texto")
-
     input.addEventListener("input", () => {
         let filtradoPorBusqueda = filter()
         crearupComing(filtradoPorBusqueda, div)
     })
-
     function filterBusqueda(eventos, valueSearch) {
         return eventos.filter(event => (event.name).toLowerCase().includes(valueSearch.toLowerCase()))
     }
-
     function filter() {
         let filtradoCategoria = filterCategoria(events, categorias)
         let filtradoBusqueda = filterBusqueda(filtradoCategoria, input.value)
