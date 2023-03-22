@@ -3,26 +3,25 @@ async function createTable() {
         let urlApi = "https://api-amazingevents.onrender.com/api/amazing-events"
         let fetchResponse = await fetch(urlApi)
         let response = await fetchResponse.json()
-        let pastEvArray = [];
+        let pastEventArray = [];
         for (let event of response.events) {
             if (event.date < response.currentDate) {
-                pastEvArray.push(event);
+                pastEventArray.push(event);
             }
         }
-        pastEvArray.sort((a, b) => b.capacity - a.capacity);
-        document.getElementById("MaxEventCapacity").innerHTML = `${pastEvArray[0].name}`;
+        pastEventArray.sort((a, b) => b.capacity - a.capacity);
+        document.getElementById("MaxEventCapacity").innerHTML = `${pastEventArray[0].name}`;
         let maxCapacity = document.getElementById("MaxCapacity");
-        maxCapacity.innerHTML = `${pastEvArray[0].capacity}`
-        pastEvArray.sort((a, b) => ((b.assistance * 100) / b.capacity) - ((a.assistance * 100) / a.capacity));
-        document.getElementById("MaxEventAssistance").innerHTML = `${pastEvArray[0].name}`;
-        document.getElementById("MaxAssistance").innerHTML = `${Number(pastEvArray[0].assistance / pastEvArray[0].capacity * 100).toFixed(2)}%`;
-        document.getElementById("MinEventAssistance").innerHTML = `${pastEvArray[pastEvArray.length - 1].name}`;
-        document.getElementById("MinAssistance").innerHTML = `${Number(pastEvArray[pastEvArray.length - 1].assistance / pastEvArray[pastEvArray.length - 1].capacity * 100).toFixed(2)}%`;
-
+        maxCapacity.innerHTML = `${pastEventArray[0].capacity}`
+        pastEventArray.sort((a, b) => ((b.assistance * 100) / b.capacity) - ((a.assistance * 100) / a.capacity));
+        document.getElementById("MaxEventAssistance").innerHTML = `${pastEventArray[0].name}`;
+        document.getElementById("MaxAssistance").innerHTML = `${Number(pastEventArray[0].assistance / pastEventArray[0].capacity * 100).toFixed(2)}%`;
+        document.getElementById("MinEventAssistance").innerHTML = `${pastEventArray[pastEventArray.length - 1].name}`;
+        document.getElementById("MinAssistance").innerHTML = `${Number(pastEventArray[pastEventArray.length - 1].assistance / pastEventArray[pastEventArray.length - 1].capacity * 100).toFixed(2)}%`;
         let categoryPastArray = [];
         let categoryPastArrayFilter = [];
         let categoryPastArrayInnerHtml = [];
-        pastEvArray.forEach(event => {
+        pastEventArray.forEach(event => {
             let asistencia = "";
             let capacidad = "";
             let precio = "";
@@ -31,7 +30,7 @@ async function createTable() {
             let obj_acc = {};
             if (!categoryPastArray.includes(event.category)) {
                 categoryPastArray.push(event.category);
-                categoryPastArrayFilter = pastEvArray.filter(e => e.category == event.category)
+                categoryPastArrayFilter = pastEventArray.filter(e => e.category == event.category)
                 categoryPastArrayFilter.reduce((acc, current) => {
                     asistencia = current.assistance;
                     precio = current.price;
@@ -64,14 +63,14 @@ async function createTableColumn() {
         let urlApi = "https://api-amazingevents.onrender.com/api/amazing-events?time=upcoming"
         let fetchResponse = await fetch(urlApi)
         let response = await fetchResponse.json()
-        let upcomingEvArray = [];
+        let upcomingEventArray = [];
         for (let event of response.events) {
-            upcomingEvArray.push(event);
+            upcomingEventArray.push(event);
         }
         let categoryUpcomingArray = [];
         let categoryUpcomingArrayFilter = [];
         let categoryUpcomingArrayInnerHtml = [];
-        upcomingEvArray.forEach(event => {
+        upcomingEventArray.forEach(event => {
             let estimado = "";
             let capacidad = "";
             let precio = "";
@@ -80,7 +79,7 @@ async function createTableColumn() {
             let obj_acc = {};
             if (!categoryUpcomingArray.includes(event.category)) {
                 categoryUpcomingArray.push(event.category);
-                categoryUpcomingArrayFilter = upcomingEvArray.filter(e => e.category == event.category)
+                categoryUpcomingArrayFilter = upcomingEventArray.filter(e => e.category == event.category)
                 categoryUpcomingArrayFilter.reduce((acc, current) => {
                     estimado = current.estimate;
                     precio = current.price;
