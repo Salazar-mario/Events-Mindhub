@@ -1,6 +1,6 @@
 async function createTable() {
     try {
-        let urlApi = "https://api-amazingevents.onrender.com/api/amazing-events"
+        let urlApi = "https://mindhub-xj03.onrender.com/api/amazing"
         let fetchResponse = await fetch(urlApi)
         let response = await fetchResponse.json()
         let pastEventArray = [];

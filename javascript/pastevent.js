@@ -1,5 +1,5 @@
 async function pastEventos() {
-    let urlApi = "https://api-amazingevents.onrender.com/api/amazing-events?time=past";
+    let urlApi = "https://mindhub-xj03.onrender.com/api/amazing?time=past";
     let fetchResponse = await fetch(urlApi);
     let response = await fetchResponse.json();
     let assistance = response.events;

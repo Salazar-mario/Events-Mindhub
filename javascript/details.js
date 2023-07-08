@@ -3,11 +3,11 @@ let params = new URLSearchParams(queryString)
 let id = params.get("id")
 async function printDetails() {
   try {
-  let urlApi = "https://api-amazingevents.onrender.com/api/amazing-events";
+  let urlApi = "https://mindhub-xj03.onrender.com/api/amazing";
   let fetchResponse = await fetch(urlApi);
   let response = await fetchResponse.json();
   let arrayEventos = response.events
-  let eventsId = arrayEventos.find(eventsId => eventsId.id === id)
+  let eventsId = arrayEventos.find(eventsId => eventsId._id === id)
   cardDetails(eventsId)
 }catch (error) {
     console.log(error);
@@ -27,4 +27,5 @@ function cardDetails(eventsId){
 `;
 document.getElementById("idContainer").innerHTML = card;
 }
+
 printDetails()

@@ -1,5 +1,5 @@
 async function upcomingEventos() {
-    let urlApi = "https://api-amazingevents.onrender.com/api/amazing-events?time=upcoming";
+    let urlApi = "https://mindhub-xj03.onrender.com/api/amazing?time=upcoming";
     let fetchResponse = await fetch(urlApi);
     let response = await fetchResponse.json();
     let events = response.events;
