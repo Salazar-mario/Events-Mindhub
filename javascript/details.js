@@ -7,7 +7,7 @@ async function printDetails() {
   let fetchResponse = await fetch(urlApi);
   let response = await fetchResponse.json();
   let arrayEventos = response.events
-  let eventsId = arrayEventos.find(eventsId => eventsId._id === id)
+  let eventsId = arrayEventos.find(eventsId => eventsId._id == id)
   cardDetails(eventsId)
 }catch (error) {
     console.log(error);

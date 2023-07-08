@@ -121,7 +121,6 @@ nav a.active {
     width: 600px;
     color: rgb(7, 7, 7);
     font-family: Arial Black;
-    ;
 }
 
 .formulario2 {
@@ -220,35 +219,43 @@ footer p {
 
 }
 
-@media only screen and (min-width:341px) and (max-width:740px) {
-
-    form {
-        display: block;
-    }
-
-    footer p {
-        font-size: 18px;
-    }
-}
-
-@media only screen and (min-width:350px) and (max-width:775px) {
+@media only screen and (max-width: 767px) {
     nav {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: auto;
     }
 
     nav a {
-        width: 52px;
-        height: 30px;
-        font-size: 12px;
-        padding: 0;
         margin: 5px;
+    }
+
+    .formulario form {
+        width: 90%;
+        max-width: 400px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container .card {
+        width: 90%;
+    }
+
+    .container .card img {
+        height: 150px;
+    }
+
+    .container .card h3 {
+        font-size: 24px;
+    }
+
+    .container .card p {
+        font-size: 14px;
     }
 }
 
-@media only screen and (min-width:350px) and (max-width:625px) {
-    .fondo {
-        background-size: contain;
+@media only screen and (max-width: 480px) {
+    .formulario form {
+        width: 90%;
     }
 }

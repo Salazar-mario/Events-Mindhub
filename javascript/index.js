@@ -14,7 +14,7 @@ async function printEvents() {
     <h3>${date.name}</h3>
     <p>${date.description}</p>
         <p>Price: $${date.price}</p>
-        <a href="./details.html?id=${date.id}"><h4 class="rectangulo">See more</h4></a>
+        <a href="./details.html?id=${date._id}"><h4 class="rectangulo">See more</h4></a>
         </div>`
     })
     if (datos.length === 0)

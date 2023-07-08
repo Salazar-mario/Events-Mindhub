@@ -18,7 +18,7 @@ function crearpastEvent(datos, contenedor) {
     <p>${element.description}</p>
         <p>Price: $${element.price}</p>
         <p>Assistance: ${element.assistance}</p>
-        <a href="./details.html?id=${element.id}"><h4 class="rectangulo">See more</h4></a>
+        <a href="./details.html?id=${element._id}"><h4 class="rectangulo">See more</h4></a>
     </div>`
     })
     if (datos.length === 0)

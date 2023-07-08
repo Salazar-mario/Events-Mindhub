@@ -112,7 +112,6 @@ nav a.active {
 
 }
 
-
 input {
     background-color: #ffffff;
     width: 408px;
@@ -126,7 +125,6 @@ input {
     cursor: url(../img/cursor.png), pointer;
 
 }
-
 
 textarea {
     background-color: #fbfbfb;
@@ -144,14 +142,12 @@ textarea {
 
 }
 
-
 label {
     display: block;
     float: center;
     cursor: url(../img/cursor.png), pointer;
 
 }
-
 
 button {
     height: 45px;
@@ -167,23 +163,19 @@ button {
     cursor: pointer;
 }
 
-
 button {
     color: #fff;
 }
 
-
 span {
     color: #080107;
 }
-
 
 h3 {
     font-size: 16px;
     padding-bottom: 30px;
     color: #0e0e0e;
 }
-
 
 p {
     font-size: 14px;
@@ -204,44 +196,52 @@ footer p{
     color: rgb(5, 5, 5);
     width: 100%;
     text-align: center;
-
 }
 
-@media only screen and (min-width:375px) and (max-width:768px){
+@media only screen and (max-width: 767px){
     .contact_form {
-        width: 250px;
+        width: 90%;
+        max-width: 400px;
     }
     .contact_form input{
-        width: 200px;
+        width: 100%;
+    }
+@media only screen and (max-width: 767px){
+    .contact_form textarea{
+        width: 100%;
     }
     button{
-        width: 200px;
-    }
-    textarea{
-        width: 200px;
+        width: 100%;
     }
     footer p {
         font-size: 18px;
     }
-}
-@media only screen and (min-width:350px) and (max-width:775px) {
-    nav{
-        display:flex;
-        flex-direction: row;
-        align-items: flex-start;
-
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        height: auto;
     }
-    
-    nav a{
-        width: 52px;
-        height: 30px;
-        font-size: 12px;
-        padding: 0;
+
+    nav a {
         margin: 5px;
     }
 }
-@media only screen and (min-width:350px) and (max-width:625px) {
-    .fondo{
-        background-size: contain;
+
+@media only screen and (max-width: 479px){
+    .contact_form {
+        width: 90%;
+        max-width: 300px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
+    .contact_form input, .contact_form textarea {
+        width: 100%;
+    }
+    button {
+        width: 100%;
+    }
+    footer p {
+        font-size: 16px;
+    }
+}
 }

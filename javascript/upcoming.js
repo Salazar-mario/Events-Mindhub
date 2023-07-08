@@ -17,7 +17,7 @@ async function upcomingEventos() {
     <h3>${element.name}</h3>
     <p>${element.description}</p>
         <p>Price: $${element.price}</p>
-        <a href="./details.html?id=${element.id}"><h4 class="rectangulo">See more</h4></a>
+        <a href="./details.html?id=${element._id}"><h4 class="rectangulo">See more</h4></a>
     </div>`
         })
         if (datos.length === 0)
