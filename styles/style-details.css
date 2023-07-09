@@ -10,11 +10,11 @@ html,
 body {
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    background: linear-gradient(45deg, red, blue, green, black);
+    min-height: 100vh;
+    background: linear-gradient(45deg, #e6f7ff, #f5e6ff, #e6ffe6, #f2f2f2);
     background-size: 400% 400%;
-    position: relative;
     animation: cambiar 10s ease-in-out infinite;
+    cursor: url(../img/cursor.png), pointer;
 }
 
 @keyframes cambiar {
@@ -75,7 +75,7 @@ nav a.active {
     justify-content: space-around;
     align-items: center;
     height: 50px;
-    background: linear-gradient(45deg, red, blue, green, black);
+    background: linear-gradient(45deg, #e6f7ff, #f5e6ff, #e6ffe6, #f2f2f2);
     background-size: 400% 400%;
     position: relative;
     animation: cambiar 10s ease-in-out infinite;
@@ -116,17 +116,6 @@ footer p {
     width: 100%;
     text-align: center;
 
-}
-
-html,
-body {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background: linear-gradient(45deg, red, blue, green, black);
-    background-size: 400% 400%;
-    position: relative;
-    animation: cambiar 10s ease-in-out infinite;
 }
 
 .wrapper {
